@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 import './globals.css'
 
+import { ConvexClientProvider } from '@/components/providers/convex-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -32,15 +33,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="pt-BR" suppressHydrationWarning>
 			<body className={cn('antialiased', inter.className)}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-					storageKey="jotion-theme"
-				>
-					{children}
-				</ThemeProvider>
+				<ConvexClientProvider>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+						storageKey="jotion-theme"
+					>
+						{children}
+					</ThemeProvider>
+				</ConvexClientProvider>
 			</body>
 		</html>
 	)
