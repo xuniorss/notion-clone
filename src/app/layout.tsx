@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 import './globals.css'
 
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -29,8 +30,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html lang="pt-BR">
-			<body className={cn('antialiased', inter.className)}>{children}</body>
+		<html lang="pt-BR" suppressHydrationWarning>
+			<body className={cn('antialiased', inter.className)}>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+					storageKey="jotion-theme"
+				>
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	)
 }
