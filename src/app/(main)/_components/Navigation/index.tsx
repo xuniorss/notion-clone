@@ -6,6 +6,7 @@ import { ElementRef, useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from 'usehooks-ts'
 
 import { cn } from '@/lib/utils'
+import { UserItem } from '../UserItem'
 
 export const Navigation = () => {
 	const router = useRouter()
@@ -128,8 +129,8 @@ export const Navigation = () => {
 					<ChevronsLeft className="h-6 w-6" />
 				</div>
 				<div>
-					{/* <UserItem />
-          <Item
+					<UserItem />
+					{/* <Item
             label="Search"
             icon={Search}
             isSearch
