@@ -20,6 +20,16 @@ const spinnerVariants = cva('text-muted-foreground animate-spin', {
 
 interface SpinnerProps extends VariantProps<typeof spinnerVariants> {}
 
+/**
+ * @component
+ * @example
+ * // Exemplo de uso:
+ * <Spinner size='lg' />
+ * @
+ * @param {string} size - Tamanho do spinner
+ * @returns
+ */
+
 export const Spinner = ({ size }: SpinnerProps) => {
 	return <Loader className={cn(spinnerVariants({ size }))} />
 }
