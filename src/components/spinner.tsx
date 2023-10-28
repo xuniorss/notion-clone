@@ -25,7 +25,7 @@ interface SpinnerProps extends VariantProps<typeof spinnerVariants> {}
  * @example
  * // Exemplo de uso:
  * <Spinner size='lg' />
- * @
+ *
  * @param {string} size - Tamanho do spinner
  * @returns
  */
