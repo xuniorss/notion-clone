@@ -38,7 +38,7 @@ interface ItemProps {
  * @param {string} label - O rótulo a ser exibido para o item.
  * @param {function} onClick - A ação a ser executada quando o item é clicado.
  * @param {LucideIcon} icon - O ícone associado ao item.
- * @param {Id<'documents'>|undefined} [id] - Id do documento
+ * @param {Id<'documents'>|undefined} [id] - Id do documento.
  * @param {boolean} [active] - Indica se o item está ativo.
  * @param {string} [documentIcon] - Ícone de documento personalizado.
  * @param {boolean} [expanded] - Indica se o item está expandido.
