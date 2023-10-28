@@ -38,13 +38,13 @@ interface ItemProps {
  * @param {string} label - O rótulo a ser exibido para o item.
  * @param {function} onClick - A ação a ser executada quando o item é clicado.
  * @param {LucideIcon} icon - O ícone associado ao item.
- * @param {Id<'documents'>|undefined} [id] - Id do documento.
- * @param {boolean} [active] - Indica se o item está ativo.
- * @param {string} [documentIcon] - Ícone de documento personalizado.
- * @param {boolean} [expanded] - Indica se o item está expandido.
- * @param {boolean} [isSearch] - Indica se o componente está sendo usado para pesquisa.
- * @param {number} [level] - O nível de aninhamento do item.
- * @param {function} [onExpand] - Ação a ser executada quando o item é expandido.
+ * @param {Id<'documents'>|undefined} [id=undefined] - Id do documento.
+ * @param {boolean} [active=false] - Indica se o item está ativo.
+ * @param {string} [documentIcon=undefined] - Ícone de documento personalizado.
+ * @param {boolean} [expanded=false] - Indica se o item está expandido.
+ * @param {boolean} [isSearch=false] - Indica se o componente está sendo usado para pesquisa.
+ * @param {number} [level=0] - O nível de aninhamento do item.
+ * @param {function} [onExpand=undefined] - Ação a ser executada quando o item é expandido.
  */
 
 export const Item = ({
