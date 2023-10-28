@@ -20,6 +20,8 @@ interface ItemProps {
 /**
  * @component
  *
+ * @name Item
+ *
  * @description Componente que representa um item de menu.
  *
  * @example
