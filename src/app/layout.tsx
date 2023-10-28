@@ -1,11 +1,13 @@
-import { cn } from '@/lib/utils'
-import './globals.css'
-
 import { ConvexClientProvider } from '@/components/providers/convex-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { cn } from '@/lib/utils'
+
+import './globals.css'
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
+import { Toaster } from 'sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,6 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 						disableTransitionOnChange
 						storageKey="jotion-theme"
 					>
+						<Toaster position="bottom-center" />
 						{children}
 					</ThemeProvider>
 				</ConvexClientProvider>
