@@ -2,12 +2,13 @@
 
 import { cn } from '@/lib/utils'
 import { useMutation } from 'convex/react'
-import { ChevronsLeft, PlusCircle, Search, Settings } from 'lucide-react'
+import { ChevronsLeft, Plus, PlusCircle, Search, Settings } from 'lucide-react'
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { ElementRef, useEffect, useRef, useState } from 'react'
 import { toast } from 'sonner'
 import { useMediaQuery } from 'usehooks-ts'
 import { api } from '../../../../../convex/_generated/api'
+import { DocumentList } from '../DocumentList'
 import { Item } from '../Item'
 import { UserItem } from '../UserItem'
 
@@ -148,13 +149,13 @@ export const Navigation = () => {
 					/>
 				</div>
 				<div className="mt-4">
-					{/* <DocumentList />
-          <Item
-            onClick={handleCreate}
-            icon={Plus}
-            label="Add a page"
-          />
-          <Popover>
+					<DocumentList />
+					<Item
+						onClick={handleCreate}
+						icon={Plus}
+						label="Adicionar uma página"
+					/>
+					{/* <Popover>
             <PopoverTrigger className="w-full mt-4">
               <Item label="Trash" icon={Trash} />
             </PopoverTrigger>
